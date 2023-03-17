@@ -4,7 +4,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GithubApiHttpInterceptor } from './http-interceptors/github-api.http-interceptor';
 
 @NgModule({
   declarations: [
@@ -16,11 +15,7 @@ import { GithubApiHttpInterceptor } from './http-interceptors/github-api.http-in
     HttpClientModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: GithubApiHttpInterceptor,
-      multi: true
-    }
+    
   ],
   bootstrap: [AppComponent]
 })
